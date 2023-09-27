@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+@font-face{
+    font-family: StarWars;
+    src: url('./assets/movies/font/starjedi/Starjhol.ttf')
+}
+@font-face{
+    font-family: StarWars2;
+    src: url('./assets/movies/font/starjedi/Starjedi.ttf')
+}
+
+.movie {
+    background-image: $movies-background;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 100vh;
+}
+.movie::-webkit-scrollbar-track
+{
+	box-shadow:inset 0 0 6px rgba(0,0,0,0.6) ;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+	background-color: #CCCCCC;
+}
+
+.movie::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.movie::-webkit-scrollbar-thumb
+{
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(0, 0, 0, 1) 0%,
+											  rgba(0, 0, 0, 1) 25%,
+											  transparent 100%,
+											  rgba(0, 0, 0, 1) 75%,
+											  transparent)
+}
+
+// .movie-card ,.movie-card::before, .movie-card::after {
+// 	box-sizing:inherit;
+// }
+.movie__navbar{
+    display: flex;
+    font-family: StarWars2;
+    width: 100%;
+    justify-content: center;
+    position: sticky;
+    top: 0; 
+    z-index: 2;
+    background-image: $movies-background;
+    background-size: contain;
+}
+.movie__navbar-item{
+    padding: .5em 3em .5em 3em;
+    text-decoration: none;
+    color: white;
+
+    &:hover{
+        color: $starwarsyellow;
+    }
+}
+.movie__navbar-item-active{
+	color: $starwarsyellow;
+}
+.movie-top{
+    font-family: StarWars;
+    color: $starwarsyellow;
+    font-size: 30px;
+    text-align: center;
+}
+#secondP{
+    display: none;
+}
+#readMore{
+    display: block;
+}
+#readLess{
+    display: none;
+}
+
+.movie-card {
+	background-color: $bg-color;
+	font-family: $font-stack-content;
+	font-size: 14px;
+	color:$primary-color;
+	line-height: 1.5;
+	font-weight: 400;
+	overflow-x: hidden;
+    box-sizing:border-box;
+}
+
+.movie-card {
+	transition: .4s;
+}
+
+.movie-card a {
+	text-decoration: none;
+}
+
+.movie-card button {
+	font-family: inherit;
+	border: 0;
+	cursor: pointer;
+	&:focus {
+		outline: 0;
+	}
+}
+
+.movie-card {
+	background-size: contain;
+	background-repeat: no-repeat;
+	width:100%;
+	max-width: 800px;
+	height: 100%;
+	min-height: 300px;
+	display: block;
+	margin: 8vh auto;
+	border-radius: 8px;
+	box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.25);
+	position: relative;
+	@media screen and (max-width: 800px) {
+		width: 95%;
+		max-width: 95%;
+	}
+	@media screen and (max-width: 600px) {
+		background-position:50% 0%;
+		background-size: contain;
+		height: 400px;
+	}
+	&[data-movie="Project"] {
+		background-image: $background-image;
+        background-size: auto;
+        background-position: center;
+	}
+	&[data-movie="Me"] {
+		background-image: $background-image2;
+        background-size: 60%;
+        background-position: -10% 8%;
+	}
+	&[data-movie="English"] {
+		background-image: $background-image3;
+        background-size: 55%;
+        background-position: 0% 7%;
+	}
+    &[data-movie="Handball"]{
+		background-image: $background-image4;
+        background-size: 60%;
+        background-position: -10% 25%;
+    }
+    &[data-movie="Guitar"]{
+		background-image: $background-image5;
+        background-size: 60%;
+        background-position: -10% 8%;
+    }
+	&__overlay {
+		width:100%;
+		height: 100%;
+		border-radius: 8px;
+		background: linear-gradient(to right, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) 55%,rgba(33,33,32,1) 100%);
+		background-blend-mode: multiply;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		@media screen and (max-width: 600px) {
+			background: linear-gradient(to bottom, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) 60%,rgba(33,33,32,1) 100%);
+		}
+	}
+	&__share {
+		padding: 1em;
+		display: inline-block;
+		width: 100%;
+		max-width: 130px;
+		@media screen and (max-width: 600px) {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__icon {
+		color: #ffffff;
+		mix-blend-mode: lighten;
+		opacity: .4;
+		background: none;
+		padding: 0;
+		&:hover {
+			opacity:1;
+			mix-blend-mode: lighten;
+		}
+		&:not(:first-of-type) {
+			margin-left: 5px;
+		}
+		i {
+			font-size: 1.2em;
+		}
+	}
+	&__content {
+		width: 100%;
+		max-width:370px;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		position:relative;
+		float: right;
+		padding-right: 1.2em;
+		padding-bottom: 1em;
+		@media screen and (max-width: 1000px) {
+			width: 50%;
+		}
+		@media screen and (max-width: 600px) {
+			margin-top: 4.2em;
+			width: 100%;
+			float: inherit;
+			max-width: 100%;
+			padding: 0 .5em 1em;
+		}
+	}
+	&__header {
+		margin-bottom: 2em;
+	}
+	&__title {
+		color: #ffffff;
+		margin-bottom: .25em;
+		opacity: .75;
+	}
+	&__info {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: .8em;
+		color: $secondary-color;
+		line-height: 1;
+		margin: 0;
+		font-weight: 700;
+		opacity:.5;
+	}
+	&__desc {
+		font-weight: 300;
+		opacity: .84;
+		margin-bottom: 2em;
+	}
+}
+
+.movie-card h1,.movie-card h2,.movie-card h3 {
+	font-family: $font-stack-header;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 1;
+	font-weight: 400;
+}
+
+.movie-card .btn {
+	padding: .5rem 2rem;
+	background-color: rgba(255,255,255,.4);
+	color: rgba(255,255,255,1);
+}
+
+.movie-card .btn-outline {
+	background-color: transparent;
+	border: 3px solid #ffffff;
+}
+
+.movie-card .btn::before {
+	font-family: 'Material Icons';
+	vertical-align: middle;
+	font-size: 1.5em;
+	padding-right:.5em;
+}
+
+.movie-card .btn-outline:hover {
+	border-color: $secondary-color;
+	color: $secondary-color;
+	box-shadow: 0px 1px 8px 0px rgba(245,199,0,.2);
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 349px){
+	.movie__navbar{
+		width: 100vw;
+		font-size: 8px;
+		position: fixed;
+		bottom: 0;
+		top: auto;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+	.movie__navbar-item {
+		padding: 0 1em 0 1em;
+	}
+	.movie-top{
+		font-size: 20px;
+		margin: 55px 0 0px 0;
+	}
+	.movie-card {
+		&[data-movie="Project"] {
+			background-image: $background-image;
+			background-size: auto;
+			background-position: top;
+			height: fit-content;
+		}
+		&[data-movie="Me"] {
+			background-image: $background-image2;
+			background-size: cover;
+			background-position: 0% 7%;
+			height: fit-content;
+		}
+		&[data-movie="English"] {
+			background-image: $background-image3;
+			background-size: cover;
+			background-position: 0% 0%;
+			height: fit-content;
+		}
+		&[data-movie="Handball"]{
+			background-image: $background-image4;
+			background-size: 100%;
+			background-position: 10% 65%;
+		}
+		&[data-movie="Guitar"]{
+			background-image: $background-image5;
+			background-size: cover;
+			background-position: 10% 8%;
+			height: fit-content;
+		}
+		&__content{
+			margin-top: 9em;
+		}
+		&__desc{
+			width: 90%;
+
+		}
+	}
+	.movie::-webkit-scrollbar{
+		display: none;
+	}
+}
+@media only screen and (min-device-width: 350px) and (max-device-width: 660px){
+	.movie__navbar{
+		width: 100vw;
+		font-size: 10px;
+		position: fixed;
+		bottom: 0;
+		top: auto;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+	.movie__navbar-item {
+		padding: 0 1em 0 1em;
+	}
+	.movie-top{
+		font-size: 20px;
+		margin: 55px 0 0px 0;
+	}
+	.movie-card {
+		&[data-movie="Project"] {
+			background-image: $background-image;
+			background-size: auto;
+			background-position: top;
+			height: fit-content;
+		}
+		&[data-movie="Me"] {
+			background-image: $background-image2;
+			background-size: cover;
+			background-position: 0% 7%;
+			height: fit-content;
+		}
+		&[data-movie="English"] {
+			background-image: $background-image3;
+			background-size: cover;
+			background-position: 0% 0%;
+			height: fit-content;
+		}
+		&[data-movie="Handball"]{
+			background-image: $background-image4;
+			background-size: 100%;
+			background-position: 10% 65%;
+		}
+		&[data-movie="Guitar"]{
+			background-image: $background-image5;
+			background-size: cover;
+			background-position: 10% 8%;
+			height: fit-content;
+		}
+		&__content{
+			margin-top: 9em;
+		}
+		&__desc{
+			width: 90%;
+
+		}
+	}
+	.movie::-webkit-scrollbar{
+		display: none;
+	}
+}
+@media only screen and (min-device-width: 660px) and (max-device-width: 850px){
+	.movie__navbar{
+		font-size: 10px;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+}

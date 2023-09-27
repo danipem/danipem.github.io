@@ -1,0 +1,829 @@
+@font-face{
+    font-family: GothamMedium;
+    src: url('./assets/Gotham-Font/GothamMedium.ttf') format('truetype')
+}
+
+@font-face{
+    font-family: GothamLight;
+    src: url('./assets/Gotham-Font/GothamLight.ttf') format('truetype'),
+    url('./assets/Gotham-Font/Gotham-Light.otf') format('opentype')
+}
+
+.formation{
+    // font-family: GothamLight, "Helvetica", "Arial", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, GothamMedium, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    background-color: $spotify-main-background;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-size: 12px;
+}
+@media only screen  //iPhone 4
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: portrait) 
+{
+      .formation {
+          height: 495px;
+      }
+}
+@media only screen //I5
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: portrait) 
+{
+    .formation {
+        height: 580px;
+    }
+}
+@media only screen  // i 6 7 8
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .formation {
+        height: 680px;
+    }
+}
+@media only screen // i 6 7 8 plus
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+//   and (orientation: portrait) 
+{ 
+    .formation {
+        height: 750px;
+    }
+}
+@media only screen  //iphone X
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+//   and (orientation: portrait) 
+{ 
+    .formation {
+        height: 830px;
+    }
+}
+@media only screen  //iphone X
+  and (min-device-width: 411px) 
+  and (max-device-width: 823px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+//   and (orientation: portrait) 
+{ 
+    .formation {
+        height: 840px;
+    }
+}
+
+.formation__left-menu{
+    resize: horizontal;
+    background-color: $spotify-background-menu;
+    overflow: hidden;
+    width: 200px;
+    max-width: 250px;
+    min-width: 150px;
+    position: relative;
+}
+
+.formation__navbar{
+    display: flex;
+    flex-direction: column;
+    // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+    font-size: small;
+    justify-content: space-between;
+    bottom: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.formation__navbar-item{
+    color: $spotify-color-menu;
+    fill: $spotify-color-menu;
+    text-decoration: none;
+    width: fit-content;
+    line-height: 2vh;
+    padding: 0 2vw 0px 2vw;
+    display: flex;
+    cursor: pointer;
+    &:hover svg,
+    &:hover,
+    &:hover path,
+    &:hover polygon,
+    &:hover rect {
+        color: lighten($color: $spotify-color-menu, $amount: 30);
+        fill: lighten($color: $spotify-color-menu, $amount: 30);
+    }
+}
+
+.formation__navbar-item svg {
+    margin: auto;
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 1em;
+    padding-left: 0;
+}
+
+.formation__navbar-item-active{
+    color: white;
+    fill: white;
+}
+.formation__second-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: $spotify-background-menu;
+    color: $spotify-color-menu;
+    font-weight: 400;
+    font-size: small;
+    padding-bottom: 1vh;
+    height: 20vh;
+    flex-flow: wrap;
+    overflow-y: scroll;
+    font-family: -apple-system, BlinkMacSystemFont, GothamLight, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+    
+    & span{
+        line-height: 5vh;
+        padding: 0 2vw 0px 2vw;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        cursor: default;
+    }
+    & span:hover{
+        color: lighten($color: $spotify-color-menu, $amount: 30);
+    }
+    & h4{
+        font-weight: lighter;
+        padding: 0 2vw 0px 2vw;
+    }
+}
+
+.formation__detail-list-top-mobile{
+    display: none;
+
+}
+.formation__detail-information{
+    display: none;
+}
+  
+  /* Works on Chrome, Edge, and Safari */
+.formation__second-menu::-webkit-scrollbar {
+  width: 15px;
+}
+
+.formation__second-menu::-webkit-scrollbar-track {
+  background: $spotify-main-background;
+}
+
+.formation__second-menu::-webkit-scrollbar-thumb {
+  background-color: $spotify-color-menu;
+}
+
+.formation__main{
+    color: $spotify-font-color;
+    width: 80%;
+}
+.formation__main-title{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    border-bottom: 1px solid darken($color:  $spotify-color-menu, $amount: 35) ;
+    margin: auto;
+    // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+    padding: 1vh 0 1vh 0;
+}
+
+.formation__main-title-arrows{
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 5vw;
+    & svg{
+        fill: $spotify-color-menu;
+        width: fit-content;
+    }
+    & svg:hover{
+        fill: $spotify-font-color;
+    }
+}
+
+.spoti-back-arrow svg{
+    cursor: pointer;
+    margin: 2vh 0 2vh 0;
+    fill: $spotify-color-menu;
+    width: 40px;
+    &:hover{
+        fill: $spotify-font-color;
+    }
+}
+
+.formation__main-bl{
+    width: 90%;
+    margin: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    cursor: default;
+}
+
+.formation__main-bl::-webkit-scrollbar{
+    display: none;
+}
+.formation__main-block{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.formation__main-block-unit{
+    width: 200px;
+    padding: 2em 2em 2em 0;
+    & img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    & h3{
+        margin-bottom: 2vh;
+        // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+        font-size: small;
+    }
+    & h3:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    & h4{
+        // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+        font-size: smaller;
+    }
+    & h4, p{
+        color: $spotify-color-menu;
+        margin-top: 0;
+        margin-bottom: 2vh;
+    }
+    & p{
+        font-family: -apple-system,BlinkMacSystemFont, GothamLight, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+    }
+}
+
+.formation__detail{
+    color: $spotify-font-color;
+    padding: 0 2em 2em 2em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    cursor: default;
+    
+    & img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    & h2{
+        font-size: 45px;
+        margin: 0;
+        // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+    }
+    & h4{
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 1vh;
+        font-family: -apple-system, BlinkMacSystemFont, GothamLight, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+    }
+    & p{
+        color: $spotify-color-menu;
+        width: 60%;
+        font-family: -apple-system, BlinkMacSystemFont, GothamLight, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+    }
+
+    &span {
+        color: $spotify-font-color;
+    }
+}
+
+.formation__detail-top{
+    display: flex;
+    padding-left: 2vw;
+    padding-bottom: 6vh;
+}
+
+.formation__detail-top-info{
+    padding-left: 3vw;
+}
+
+.color-white{
+    color: $spotify-font-color;
+    font-weight: bolder;
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.spoti-grey{
+    color: $spotify-color-menu;
+}
+
+.formation__detail-top-info-play{
+    color: $spotify-font-color !important;
+    // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+    background-color: $spotify-green;
+    height: fit-content;
+    width: fit-content !important;
+    padding: 0.6em 3em 0.6em 3em;
+    border-radius: 9999px;
+    font-size: small;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.formation__detail-list{
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, GothamLight, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+
+}
+
+.formation__detail-list-top{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darken($color:  $spotify-color-menu, $amount: 35);
+    padding-bottom: 2vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    cursor: default;
+}
+
+.formation__detail-list-left{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    
+}
+
+.formation__detail-list-skills{
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.formation__detail-list-skills-item{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid darken($color:  $spotify-color-menu, $amount: 35);
+    margin: auto;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    cursor: default;
+    &:hover{
+        background-color: darken($color:  $spotify-color-menu, $amount: 35);
+    }
+}
+
+.formation__detail::-webkit-scrollbar {
+  width: 15px;
+}
+
+.formation__detail::-webkit-scrollbar-track {
+  background: $spotify-main-background;
+}
+
+.formation__detail::-webkit-scrollbar-thumb {
+  background-color: $spotify-color-menu;
+}
+
+.formation__mobile{
+    display: none;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px){
+    .formation__second-menu{
+        display: none;
+    }
+    .formation{
+        background: linear-gradient(-30deg, $spotify-main-background 75%, $spotify-mobile-gradient );
+    }
+    .formation__left-menu{
+        resize: horizontal;
+        background-color: $spotify-background-menu;
+        overflow: hidden;
+        // width: 200px;
+        max-width: 0;
+        min-width: 0;
+        position: unset;
+    }
+    // .formation__navbar{
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    // }
+    .formation__navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 1;
+        height: 45px;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        margin: 0 0 0 0;
+        background-color: $spotify-mobile-navbar;
+        font-size: 10px;
+        // padding: 1em;
+        padding-top: 5px;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .formation__navbar-item{
+        display: flex;
+        flex-direction: column;
+        & svg{
+            padding: 0;
+        }
+        & p{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: 200;
+        }
+    }
+    .formation__navbar-item-active{
+        color: white;
+        fill: white;
+    }
+    .formation__main{
+        width: 100%;
+    }
+    .formation__main-block{
+        width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .formation__main-block-unit{
+        width: 100px;
+        padding: 1em 2em 2em 0;
+        & img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        & h3{
+            margin-bottom: 1vh;
+            font-size: 12px;
+            margin-top: 1vh;
+        }
+        & h3:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        & h4{
+            color: $spotify-color-menu;
+            margin-top: 0;
+            margin-bottom: 2vh;
+            font-size: 10px;
+        }
+        & p{
+            display: none;
+        }
+    }
+    .formation__main-title{
+        border: none;
+        margin-top: 6vh;
+    }
+    .formation__main-title-arrows{
+        display: none;
+    }
+    .formation__mobile{
+        display: block;
+    }
+    .formation__main-block-mobile{
+        display: flex;
+        flex-flow: wrap;
+        margin: 1em;
+    }
+
+    .formation__main-block-unit-mobile{
+        width: 47%;
+        display: flex;
+        margin: 2px 0 2px 0;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        background-color: rgba(42,42,42,0.4);
+        border-radius: 3px;
+        & img{
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            margin: auto 0 auto 0;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        & h3{
+            font-size: 10px;
+            padding-left: 7px;
+            align-self: center;
+            // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+            line-height: 2vh;
+        }
+    }
+    .formation__detail{
+        padding: 0;
+        overflow: hidden;
+        // font-family: GothamMedium, "Helvetica", "Arial", sans-serif;
+    }
+    // .formation__detail::-webkit-scrollbar{
+    //     display: none;
+    // }
+    .formation__detail-top {
+        & img{
+            display: none;
+        }
+        & h2{
+            font-size: 45px;
+            margin: 0;
+        }
+        & h4{
+            display: none;
+        }
+        & p{
+            display: none;
+        }
+    }
+    .spoti-back-arrow{
+        position: fixed;
+        z-index: 1;
+    }
+
+    .formation__detail-top-info{
+        margin: auto;
+        text-align: center;
+        color: white;
+        padding: 0;
+    }
+    .formation__detail-top-1{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-upgrade);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 45%;
+        width: 100%;
+        position: fixed;
+    }
+    .formation__detail-top-2{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-ucm);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 47%;
+        height: 45%;
+        width: 100%;
+        position: fixed;
+    }
+    .formation__detail-top-3{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-erasmus);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 45%;
+        width: 100%;
+        position: fixed;
+    }
+    .formation__detail-top-4{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-udemy);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 45%;
+        width: 100%;
+        position: fixed;
+    }
+    .formation__detail-top-5{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-cm);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 45%;
+        width: 100%;
+        position: fixed;
+    }
+    .formation__detail-list{
+        background: linear-gradient(0deg, #181818 73%, rgba(0, 0, 0, 0.1));
+        position: relative;
+        margin-top: 36vh;
+
+        & ul{
+            margin: 0;
+            
+        }
+    }
+    .formation__detail-list-top-mobile{
+        display: block;
+        text-align: -webkit-center;
+        padding-top: 2vh;
+        background: linear-gradient(0deg, #181818 10%, transparent);
+
+        & .formation__detail-top-info-play{
+            display: flex;
+            padding: 2vh 10vw 2vh 10vw;
+        }
+        & p{
+            color: white;
+            font-weight: 700;
+        }
+    }
+    .formation__detail-list-top{
+        display: none;
+    }
+
+    .formation__detail-list-skills-item{
+        padding-left: 5vh;
+        padding-right: 5vh;
+        border-style: none;
+        &:nth-child(n+6){
+            display: none;
+        }
+    }
+
+    .formation__detail-information{
+        display: block;
+        width: 100%;
+        // height: 75%;
+        background-color: $spotify-main-background;
+        position: absolute;
+        margin-top: -1vh;
+        padding-bottom: 90px;
+        & p{
+            color: white;
+            text-align: center;
+            margin: auto;
+            font-weight: 900;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+        }
+    }
+
+    .formation__detail-information-picture-1{
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-upgrade);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 320px;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        & p{
+            bottom: 0%;
+            position: absolute;
+            text-align: left;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            width: 90%;
+        }
+    }
+    .formation__detail-information-picture-2{
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-ucm);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 47%;
+        height: 320px;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        & p{
+            bottom: 0%;
+            position: absolute;
+            text-align: left;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            width: 90%;
+        }
+    }
+    .formation__detail-information-picture-3{
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-erasmus);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 320px;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        & p{
+            bottom: 0%;
+            position: absolute;
+            text-align: left;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            width: 90%;
+        }
+    }
+    .formation__detail-information-picture-4{
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-udemy);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 320px;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        & p{
+            bottom: 0%;
+            position: absolute;
+            text-align: left;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            width: 90%;
+        }
+    }
+    .formation__detail-information-picture-5{
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url($url-cm);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 320px;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        & p{
+            bottom: 0%;
+            position: absolute;
+            text-align: left;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            width: 90%;
+        }
+    }
+
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 900px) and (orientation: landscape){
+    .formation__detail h2{
+        font-size: 35px;
+    }
+    .formation__detail p{
+        width: 100%;
+    }
+    .formation__detail img{
+        width: 150px;
+        height: 150px;
+    }
+    .formation__main-block-unit img{
+        width: 150px;
+        height: 150px;
+    }
+    .formation__main-block-unit p{
+        display: none;
+    }
+    .formation__main{
+        overflow: hidden;
+    }
+}

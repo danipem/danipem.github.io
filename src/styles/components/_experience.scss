@@ -1,0 +1,526 @@
+.experience {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    display: flex;
+    padding-left: 1vw;
+
+    & span,
+    img,
+    h2 {
+        cursor: pointer;
+    }
+
+    & strong {
+        color: black;
+    }
+}
+
+.dark-experience{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    display: flex;
+    background-color: $dark-twitter-background;
+    color: white;
+    padding-left: 1vw;
+    & strong{
+        color: white;
+    }
+}
+
+
+.experience__top {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-color: #eee;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 5vh;
+    padding: 3vh 2vw 0 2vw;
+    font-weight: bold;
+    border-top: none;
+    width: 47vw;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 7px solid #eee;
+
+}
+.dark-experience__top {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: $dark-twitter-background;
+    border-color: #eee;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 5vh;
+    padding: 3vh 2vw 0 2vw;
+    font-weight: bold;
+    border-top: none;
+    width: 47vw;
+    text-decoration: none;
+    color: #000;
+    & span {
+        cursor: pointer;
+        color: white;
+    }
+}
+.experience__dark-item{
+    width: 5vw;
+    margin-left: auto;
+    margin-top: -2vh;
+    display: none;
+}
+.dark-experience__dark-item{
+    width: 5vw;
+    margin-left: auto;
+    margin-top: -2vh;
+    display: none;
+}
+
+.experience__exp-hr {
+    height: 12px;
+    margin: 0 0 0 0;
+    border-top: none;
+    border-bottom: none;
+    background-color: #f5f6f7;
+    border-left-style: outset;
+}
+
+
+.experience__navbar {
+    display: flex;
+    flex-direction: column;
+    margin: 0vh 16px 16px 0;
+    font-weight: 500;
+    font-size: large;
+    text-overflow: ellipsis;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    width: 20vw;
+    background-color: white;
+}
+
+.experience__navbar-item {
+    color: black;
+    text-decoration: none;
+    width: fit-content;
+    line-height: 5px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 9999px;
+    display: flex;
+    cursor: pointer;
+
+    &:hover svg,
+    &:hover,
+    &:hover path,
+    &:hover polygon,
+    &:hover rect {
+        color: $twitter-navbar;
+        background-color: $twitter-navbar-hover;
+        fill: $twitter-navbar;
+    }
+}
+
+.dark-experience__navbar {
+    display: flex;
+    flex-direction: column;
+    margin: 0vh 16px 16px 0;
+    font-weight: 500;
+    font-size: large;
+    text-overflow: ellipsis;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+    width: 20vw;
+    background-color: $dark-twitter-background;
+}
+
+.dark-experience__navbar-item {
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    line-height: 5px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 9999px;
+    display: flex;
+    cursor: pointer;
+    fill: white;
+
+    &:hover svg,
+    &:hover,
+    &:hover path,
+    &:hover polygon,
+    &:hover rect {
+        color: $twitter-navbar;
+        background-color: $dark-twitter-hover;
+        fill: $twitter-navbar;
+    }
+}
+
+.experience__navbar-item-active{
+    color: $twitter-navbar;
+    fill: $twitter-navbar;
+}
+
+.experience__navbar-item svg {
+    margin: auto;
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 1em;
+    padding-left: 0;
+}
+.dark-experience__navbar-item svg {
+    margin: auto;
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 1em;
+    padding-left: 0;
+
+}
+
+.experience__navbar-button{
+    background-color: $twitter-navbar;
+	color: white;
+	border: none;
+	padding: 0;
+	font: inherit;
+    font-size: smaller;
+    font-weight: normal;
+	cursor: pointer;
+	outline: inherit;
+    width: 60%;
+    height: 6vh;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover{
+        background-color: darken($color: $twitter-navbar, $amount: 7);
+    }
+}
+
+.experience__navbar-button::before{
+    // content: 'Modo noche';
+    content: attr(data-night);
+}
+
+.dark-experience__navbar-button{
+    background-color: $twitter-navbar;
+	color: white;
+	border: none;
+	padding: 0;
+	font: inherit;
+    font-size: smaller;
+    font-weight: normal;
+	cursor: pointer;
+	outline: inherit;
+    width: 60%;
+    height: 6vh;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover{
+        background-color: darken($color: $twitter-navbar, $amount: 7);
+    }
+}
+
+.dark-experience__navbar-button::before{
+    // content: 'Modo día';
+    content: attr(data-day);
+}
+.experience__tweet {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 2vh 2vw 2vh 2vw;
+    width: 47vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.experience__tweet p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.experience__tweet-description span {
+    color: $hashtag-twitter;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+}
+
+.experience__tweet span:hover,
+.experience__tweet span:focus {
+    text-decoration: underline;
+}
+
+.experience__tweet-head {
+    display: flex;
+    height: 60px;
+}
+
+.experience__tweet-head img {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-top: 5px;
+    margin-right: 10px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.experience__tweet-head div {
+    display: grid;
+    grid-template-rows: 20px;
+}
+
+.experience__tweet-company {
+    color: $twitter-arroba;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.experience__tweet-title {
+    font-size: small;
+}
+
+.experience__tweet-head h2:hover {
+    text-decoration: underline;
+}
+
+.experience__tweet-date {
+    color: $twitter-arroba;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+blockquote hr {
+    color: #f1f1f1;
+    border-style: none;
+    height: 1px;
+    background-color: #F1F1F1;
+}
+
+.experience__tweet-data {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: $twitter-arroba;
+    display: flex;
+    justify-content: left;
+
+    & span {
+        padding-right: 20px;
+    }
+
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 1) {
+    .experience__navbar-item 
+        &p {
+            display: none;
+        }
+        &svg{
+            padding: 1vh 0 1vh 0;
+        }
+    .dark-experience__navbar-item 
+        &p {
+            display: none;
+        }
+        &svg{
+            padding: 1vh 0 1vh 0;
+        }
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 580px){
+    html, body{
+        width: auto;
+    }
+    .experience{
+        padding-bottom: 50px;
+    }
+    .dark-experience{
+        padding-bottom: 50px;
+    }
+    .experience__navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        height: fit-content;
+        bottom: 0;
+        top: auto;
+        background-color: white;
+        width: 95vw;
+        margin: 0 0 0 0;
+
+        & button {
+            display: none;
+        }
+    }
+    .dark-experience__navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        height: fit-content;
+        bottom: 0;
+        top: auto;
+        background-color: $dark-twitter-background;
+        width: 95vw;
+        margin: 0 0 0 0;
+        & button {
+            display: none;
+        }
+    }
+    .experience__navbar-item-img {
+        display: none;
+    }
+
+    .experience__navbar-item svg{
+        padding-right: 0;
+        height: 5vh;
+    }
+    .dark-experience__navbar-item svg{
+        padding-right: 0;
+        height: 5vh;
+    }
+    .experience__tweet{
+        width: 90vw;
+        margin: 0;
+        border-width: 0 0 1px 0;
+    }
+    .experience__top{
+        width: 90vw;
+        border-width: 0 0 1px 0;
+
+    }
+    .dark-experience__top{
+        width: 90vw;
+        border-width: 0 0 1px 0;
+    }
+    .experience__dark-item{
+        width: 9vw;
+        margin-left: auto;
+        margin-top: -2vh;
+        display: block;
+        fill: $dark-twitter-hover;
+    }
+
+    .dark-experience__dark-item{
+        width: 9vw;
+        margin-left: auto;
+        margin-top: -2vh;
+        display: block;
+        fill: $twitter-navbar;
+    }
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 349px){
+    html, body{
+        width: auto;
+    }
+    .experience{
+        padding-bottom: 50px;
+    }
+    .dark-experience{
+        padding-bottom: 50px;
+    }
+    .experience__navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        height: fit-content;
+        bottom: 0;
+        top: auto;
+        background-color: white;
+        width: 95vw;
+        margin: 0 0 0 0;
+
+        & button {
+            display: none;
+        }
+    }
+    .dark-experience__navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        height: fit-content;
+        bottom: 0;
+        top: auto;
+        background-color: $dark-twitter-background;
+        width: 95vw;
+        margin: 0 0 0 0;
+        & button {
+            display: none;
+        }
+    }
+    .experience__navbar-item-img {
+        display: none;
+    }
+
+    .experience__navbar-item svg{
+        padding-right: 0;
+        height: 5vh;
+    }
+    .dark-experience__navbar-item svg{
+        padding-right: 0;
+        height: 5vh;
+    }
+    .experience__tweet{
+        width: 90vw;
+        margin: 0;
+        border-width: 0 0 1px 0;
+    }
+    .experience__top{
+        width: 90vw;
+        border-width: 0 0 1px 0;
+
+    }
+    .dark-experience__top{
+        width: 90vw;
+        border-width: 0 0 1px 0;
+    }
+
+    .experience__dark-item{
+        width: 9vw;
+        margin-left: auto;
+        margin-top: -2vh;
+        display: block;
+        fill: $dark-twitter-hover;
+    }
+
+    .dark-experience__dark-item{
+        width: 9vw;
+        margin-left: auto;
+        margin-top: -2vh;
+        display: block;
+        fill: $twitter-navbar;
+    }
+}
