@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/danipem.github.io/static/css/main.e7c15e15.chunk.css",
+    "main.js": "/danipem.github.io/static/js/main.e7d1ff44.chunk.js",
+    "main.js.map": "/danipem.github.io/static/js/main.e7d1ff44.chunk.js.map",
+    "runtime-main.js": "/danipem.github.io/static/js/runtime-main.6ef3ca38.js",
+    "runtime-main.js.map": "/danipem.github.io/static/js/runtime-main.6ef3ca38.js.map",
+    "static/js/2.ec26bb74.chunk.js": "/danipem.github.io/static/js/2.ec26bb74.chunk.js",
+    "static/js/2.ec26bb74.chunk.js.map": "/danipem.github.io/static/js/2.ec26bb74.chunk.js.map",
+    "index.html": "/danipem.github.io/index.html",
+    "static/css/main.e7c15e15.chunk.css.map": "/danipem.github.io/static/css/main.e7c15e15.chunk.css.map",
+    "static/js/2.ec26bb74.chunk.js.LICENSE.txt": "/danipem.github.io/static/js/2.ec26bb74.chunk.js.LICENSE.txt",
+    "static/media/FotoCV.152c68f6.jpg": "/danipem.github.io/static/media/FotoCV.152c68f6.jpg",
+    "static/media/styles.css": "/danipem.github.io/static/media/stars.95c8c47c.jpg",
+    "static/media/arrow.aa7980b0.png": "/danipem.github.io/static/media/arrow.aa7980b0.png",
+    "static/media/attach file.fe5ba0a1.png": "/danipem.github.io/static/media/attach file.fe5ba0a1.png",
+    "static/media/check-2.72b7e11e.png": "/danipem.github.io/static/media/check-2.72b7e11e.png",
+    "static/media/icons8-twitter.fe06d572.svg": "/danipem.github.io/static/media/icons8-twitter.fe06d572.svg",
+    "static/media/mic.01ae802a.png": "/danipem.github.io/static/media/mic.01ae802a.png",
+    "static/media/send.6057cd95.png": "/danipem.github.io/static/media/send.6057cd95.png",
+    "static/media/video.e525f791.png": "/danipem.github.io/static/media/video.e525f791.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ef3ca38.js",
+    "static/js/2.ec26bb74.chunk.js",
+    "static/css/main.e7c15e15.chunk.css",
+    "static/js/main.e7d1ff44.chunk.js"
+  ]
+}
