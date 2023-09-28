@@ -174,7 +174,7 @@ export const FormationScreen = () => {
                             <h3 >{t('form3title')}</h3>
                         </div>
                         <div onClick={showScreen4} className="formation__main-block-unit-mobile">
-                            <img src="https://s3.amazonaws.com/media.al-fanarmedia.org/wp-content/uploads/2020/04/17090134/udemy.jpg" alt="Udemy" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfBuUrT-lz9LNkQ4MPqmT-QKyGdTVVuB-JBg&usqp=CAU" alt="Udemy" />
                             <h3 >{t('form4title')}</h3>
                         </div>
                         <div onClick={showScreen5} className="formation__main-block-unit-mobile">
@@ -216,7 +216,7 @@ export const FormationScreen = () => {
                             <p>{t('form3text')}</p>
                         </div>
                         <div className="formation__main-block-unit">
-                            <img onClick={showScreen4} src="https://s3.amazonaws.com/media.al-fanarmedia.org/wp-content/uploads/2020/04/17090134/udemy.jpg" alt="Udemy" />
+                            <img onClick={showScreen4} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfBuUrT-lz9LNkQ4MPqmT-QKyGdTVVuB-JBg&usqp=CAU" alt="Udemy" />
                             <h3 onClick={showScreen4}>{t('form4title')}</h3>
                             <h4>Udemy</h4>
                             <p>{t('form4text')}</p>
